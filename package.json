@@ -1,5 +1,6 @@
 {
   "name": "webpack-parts",
+  "private": true,
   "version": "0.0.1",
   "description": "Some reusable parts for webpack to boostrap development.",
   "main": "src/index.js",
