@@ -1,0 +1,43 @@
+{
+  "name": "webpack-parts",
+  "version": "0.0.1",
+  "description": "Some reusable parts for webpack to boostrap development.",
+  "main": "src/index.js",
+  "scripts": {
+    "example1": "./node_modules/.bin/webpack --config examples/webpack.config.1.js",
+    "example2": "./node_modules/.bin/webpack --config examples/webpack.config.2.js",
+    "example3": "./node_modules/.bin/webpack --config examples/webpack.config.3.js",
+    "example4": "./node_modules/.bin/webpack --config examples/webpack.config.4.js",
+    "clean": "rm -rf ./examples/dist && rm -rf ./examples/stats",
+    "deep-clean": "yarn clean && rm -rf ./node_modules && rm -rf ./.awcache",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdmackie/webpack-parts.git"
+  },
+  "keywords": [
+    "webpack",
+    "clean",
+    "copy",
+    "analyzer",
+    "html",
+    "parts"
+  ],
+  "author": "Ben Mackie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bdmackie/webpack-parts/issues"
+  },
+  "homepage": "https://github.com/bdmackie/webpack-parts#readme",
+  "peerDependencies": {},
+  "dependencies": {
+    "caller-path": "^2.0.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.2.3",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.8.1",
+    "webpack-bundle-analyzer": "^2.9.1",
+    "webpack-merge": "^4.1.1"
+  }
+}

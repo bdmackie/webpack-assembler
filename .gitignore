@@ -1,3 +1,7 @@
+examples/dist
+
+--- github Node below ---
+
 # Logs
 logs
 *.log
