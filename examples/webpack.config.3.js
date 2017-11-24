@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
-const parts = require('../src/index.js');
+const parts = require('../src/index').parts;
 
 const ROOT_DIR = __dirname
 const SRC_DIR = exports.SRC_DIR = path.resolve(ROOT_DIR, './src')
