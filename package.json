@@ -1,5 +1,5 @@
 {
-  "name": "webpack-parts",
+  "name": "webpack-fu",
   "private": true,
   "version": "0.0.1",
   "description": "Some reusable parts for webpack to boostrap development.",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bdmackie/webpack-parts.git"
+    "url": "git+https://github.com/bdmackie/webpack-fu.git"
   },
   "keywords": [
     "webpack",
@@ -28,9 +28,9 @@
   "author": "Ben Mackie",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bdmackie/webpack-parts/issues"
+    "url": "https://github.com/bdmackie/webpack-fu/issues"
   },
-  "homepage": "https://github.com/bdmackie/webpack-parts#readme",
+  "homepage": "https://github.com/bdmackie/webpack-fu#readme",
   "peerDependencies": {},
   "dependencies": {
     "caller-path": "^2.0.0",
