@@ -7,6 +7,11 @@ const SRC_DIR = exports.SRC_DIR = path.resolve(ROOT_DIR, './src')
 const DIST_DIR = exports.DIST_DIR = path.resolve(ROOT_DIR, './dist')
 
 var config = parts.merge([
+    parts.env({
+        NODE_ENV: 'development',
+        DEBUG: true
+    }),
+
     // Clean
     parts.clean([DIST_DIR], {root:ROOT_DIR}),
 

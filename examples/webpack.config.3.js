@@ -27,7 +27,7 @@ var config = parts.merge([
     },
 
     // Extract bundles.
-    parts.extract([
+    parts.extractBundles([
         // Extract remaining vendor bundles.
         {
             name: 'vendor',
