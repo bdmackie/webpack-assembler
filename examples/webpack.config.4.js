@@ -1,6 +1,6 @@
-const parts = require('../src/index').parts;
+const {merge, parts} = require('../src/index');
 
-module.exports = parts.merge(
+module.exports = merge(
     require('./webpack.config.3.js'),
     parts.analyze()
 );

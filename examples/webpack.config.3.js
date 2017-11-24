@@ -1,12 +1,12 @@
 var webpack = require('webpack');
 var path = require('path');
-const parts = require('../src/index').parts;
+const {merge, parts} = require('../src/index');
 
 const ROOT_DIR = __dirname
 const SRC_DIR = exports.SRC_DIR = path.resolve(ROOT_DIR, './src')
 const DIST_DIR = exports.DIST_DIR = path.resolve(ROOT_DIR, './dist')
 
-var config = parts.merge([
+var config = merge([
     // Clean
     parts.clean([DIST_DIR], {root:ROOT_DIR}),
 

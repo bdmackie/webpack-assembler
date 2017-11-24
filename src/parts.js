@@ -13,8 +13,6 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const callerPath = require('caller-path');
 const path = require('path')
 
-exports.merge = merge;
-
 exports.env = (vars) => ({
   plugins: [
     // Setup process environment.
