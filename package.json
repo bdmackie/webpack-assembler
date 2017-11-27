@@ -5,12 +5,12 @@
   "description": "Some reusable parts for webpack to boostrap development.",
   "main": "src/index.js",
   "scripts": {
-    "example1": "./node_modules/.bin/webpack --config examples/webpack.config.1.js",
-    "example2": "./node_modules/.bin/webpack --config examples/webpack.config.2.js",
-    "example3": "./node_modules/.bin/webpack --config examples/webpack.config.3.js",
-    "example4": "./node_modules/.bin/webpack --config examples/webpack.config.4.js",
+    "example:1": "./node_modules/.bin/webpack --config examples/webpack.config.1.js",
+    "example:2": "./node_modules/.bin/webpack --config examples/webpack.config.2.js",
+    "example:3": "./node_modules/.bin/webpack --config examples/webpack.config.3.js",
+    "example:4": "./node_modules/.bin/webpack --config examples/webpack.config.4.js",
     "clean": "rm -rf ./examples/dist && rm -rf ./examples/stats",
-    "deep-clean": "yarn clean && rm -rf ./node_modules && rm -rf ./.awcache",
+    "clean:all": "yarn clean && rm -rf ./node_modules && rm -rf ./.awcache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -35,14 +35,14 @@
     "webpack": ">= 3.8.0"
   },
   "dependencies": {
+  },
+  "devDependencies": {
     "caller-path": "^2.0.0",
     "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.2.3",
     "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.8.1",
     "webpack-bundle-analyzer": "^2.9.1",
     "webpack-merge": "^4.1.1"
-  },
-  "devDependencies": {
-    "webpack": "^3.8.1"
   }
 }

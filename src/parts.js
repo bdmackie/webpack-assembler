@@ -3,7 +3,6 @@
 // - https://survivejs.com/webpack/building/bundle-splitting/
 // - https://github.com/survivejs-demos/webpack-demo/blob/master/webpack.parts.js
 
-const _ = require('lodash');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -30,7 +29,7 @@ exports.clean = (paths, options, forceOptions) => {
     options = defaultCleanOptions
   }
   if (!forceOptions) {
-    options = _.merge(defaultCleanOptions, options)
+    options = Object.assign(defaultCleanOptions, options)
   }
   console.log('clean-webpack-plugin: root is ' + options.root)
   return {
