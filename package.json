@@ -31,9 +31,6 @@
     "url": "https://github.com/bdmackie/webpack-fu/issues"
   },
   "homepage": "https://github.com/bdmackie/webpack-fu#readme",
-  "peerDependencies": {
-    "webpack": ">= 3.8.0"
-  },
   "dependencies": {
   },
   "devDependencies": {
