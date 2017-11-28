@@ -1,6 +1,6 @@
 {
   "name": "webpack-assembler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Assemble webpack configs by merging common and custom parts.",
   "main": "src/index.js",
   "scripts": {
@@ -12,8 +12,8 @@
     "clean": "rm -rf ./examples/build && rm -rf ./examples/stats",
     "clean:all": "yarn clean && rm -rf ./node_modules && rm -rf ./.awcache",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preversion": "",
-    "version": "npm run build && git add -A dist",
+    "preversion": "yarn clean",
+    "version": "git add -A dist",
     "postversion": "git push && git push --tags && rm -rf build/temp"
   },
   "repository": {
