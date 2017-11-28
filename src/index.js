@@ -1,8 +1,15 @@
 exports.merge = require('webpack-merge')
 
-var parts = {}
-Object.assign(parts, require('./core'))
-Object.assign(parts, require('./use'))
-Object.assign(parts, require('./output'))
-Object.assign(parts, require('./bundles'))
+var parts = {
+    add: function(parts) {
+        Object.assign(this, parts)
+        return this
+    }
+}
+
+parts.add(require('./core'))
+    .add(require('./use'))
+    .add(require('./output'))
+    .add(require('./bundles'))
+
 exports.parts = parts
