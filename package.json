@@ -1,8 +1,7 @@
 {
-  "name": "webpack-fu",
-  "private": true,
+  "name": "webpack-assembler",
   "version": "0.0.1",
-  "description": "Some reusable parts for webpack to boostrap development.",
+  "description": "Assemble webpack configs by merging common and custom parts.",
   "main": "src/index.js",
   "scripts": {
     "example:01": "./node_modules/.bin/webpack --config examples/webpack.config.01.js",
@@ -16,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bdmackie/webpack-fu.git"
+    "url": "git+https://github.com/bdmackie/webpack-assembler.git"
   },
   "keywords": [
     "webpack",
@@ -29,9 +28,9 @@
   "author": "Ben Mackie",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bdmackie/webpack-fu/issues"
+    "url": "https://github.com/bdmackie/webpack-assembler/issues"
   },
-  "homepage": "https://github.com/bdmackie/webpack-fu#readme",
+  "homepage": "https://github.com/bdmackie/webpack-assembler#readme",
   "dependencies": {
     "circular-dependency-plugin": "^4.2.1",
     "clean-webpack-plugin": "^0.1.17",
