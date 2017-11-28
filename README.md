@@ -7,6 +7,7 @@ parts - a set of common parts.
 
 # example
 
+```javascript
 const {merge, parts} = require('./webpack.parts')
 
 const ROOT_DIR = __dirname
@@ -40,3 +41,4 @@ var config = merge([
 ])
 
 module.exports = config
+```
