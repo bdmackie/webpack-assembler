@@ -5,11 +5,12 @@
   "description": "Some reusable parts for webpack to boostrap development.",
   "main": "src/index.js",
   "scripts": {
-    "example:1": "./node_modules/.bin/webpack --config examples/webpack.config.1.js",
-    "example:2": "./node_modules/.bin/webpack --config examples/webpack.config.2.js",
-    "example:3": "./node_modules/.bin/webpack --config examples/webpack.config.3.js",
-    "example:4": "./node_modules/.bin/webpack --config examples/webpack.config.4.js",
-    "clean": "rm -rf ./examples/dist && rm -rf ./examples/stats",
+    "example:01": "./node_modules/.bin/webpack --config examples/webpack.config.01.js",
+    "example:02": "./node_modules/.bin/webpack --config examples/webpack.config.02.js",
+    "example:03": "./node_modules/.bin/webpack --config examples/webpack.config.03.js",
+    "example:04": "./node_modules/.bin/webpack --config examples/webpack.config.04.js",
+    "example:analyze": "./node_modules/.bin/webpack --config examples/webpack.config.analyze.js",
+    "clean": "rm -rf ./examples/build && rm -rf ./examples/stats",
     "clean:all": "yarn clean && rm -rf ./node_modules && rm -rf ./.awcache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -32,7 +33,6 @@
   },
   "homepage": "https://github.com/bdmackie/webpack-fu#readme",
   "dependencies": {
-    "caller-path": "^2.0.0",
     "circular-dependency-plugin": "^4.2.1",
     "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.2.3",
