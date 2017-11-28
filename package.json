@@ -12,6 +12,7 @@
     "clean": "rm -rf ./examples/build && rm -rf ./examples/stats",
     "clean:all": "yarn clean && rm -rf ./node_modules && rm -rf ./.awcache",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "bump": "npm version patch",
     "preversion": "yarn clean ",
     "version": "git add -A",
     "postversion": "git push && git push --tags"
