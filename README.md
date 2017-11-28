@@ -5,7 +5,7 @@ Includes two exports:
 merge - the default export of webpack-merge for merging configurations
 parts - a set of common parts.
 
-# example
+## Example
 
 ```javascript
 const {merge, parts} = require('./webpack.parts')
