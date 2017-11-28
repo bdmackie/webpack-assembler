@@ -12,9 +12,9 @@
     "clean": "rm -rf ./examples/build && rm -rf ./examples/stats",
     "clean:all": "yarn clean && rm -rf ./node_modules && rm -rf ./.awcache",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preversion": "yarn clean",
-    "version": "git add -A dist",
-    "postversion": "git push && git push --tags && rm -rf build/temp"
+    "preversion": "yarn clean ",
+    "version": "git add -A",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
