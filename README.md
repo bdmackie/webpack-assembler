@@ -5,9 +5,9 @@ Includes two exports:
 merge - the default export of webpack-merge for merging configurations
 parts - a set of common parts.
 
-## Examples
+# Examples
 
-### Basic
+## Basic
 
 ```javascript
 const {merge, parts} = require('./webpack.parts')
@@ -45,7 +45,7 @@ var config = merge([
 module.exports = config
 ```
 
-### Advanced
+## Advanced
 ```javascript
 var path = require('path')
 const {merge, parts} = require('../src/index')
@@ -98,3 +98,7 @@ var config = merge([
 
 module.exports = config
 ```
+
+## See also
+
+* [API documentation](https://github.com/bdmackie/webpack-assembler/docs/API.md)
