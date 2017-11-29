@@ -3,7 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 /**
  * Output settings for a library.
  * Defaults to UMD format.
- * @param {*} param0 
+ * @param {Object} options - library options including
+ * path, filename, library, libraryTarget and externals 
  */
 exports.library = ({
     path, 
@@ -21,7 +22,8 @@ exports.library = ({
 
 /**
  * Output settings for a page.
- * @param {*} param0 
+ * @param {Object} options - library options including
+ * path, template, title, entry and chunks.
  */
 exports.page = ({
     path = '',

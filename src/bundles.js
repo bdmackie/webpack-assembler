@@ -3,7 +3,8 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 /**
  * Splits bundles.
- * @param {*} bundles 
+ * @param {Object[]} bundles - An array of bundle configuration passed
+ * through to CommonsChunkPlugin
  */
 exports.split = (bundles) => ({
     plugins: bundles.map((bundle) => (
@@ -12,9 +13,11 @@ exports.split = (bundles) => ({
 })
 
 /**
- * Determines if a bundle is a vendor bundle
+ * Checks if a bundle is a vendor bundle
  * i.e. is installed in node_modules
- * @param {*} param0 
+ * Used as an include filter for split to 
+ * create a 'vendor bundle'.
+ * @param {Object} options
  */
 exports.isVendor = ({ resource }) => {
     return resource &&

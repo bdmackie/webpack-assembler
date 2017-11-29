@@ -1,6 +1,7 @@
 /**
  * Handle images.
- * @param {*} param0 
+ * @param {Object} options -  Images options including
+ * inlude, exclude on the rule and options on 'use'.
  */
 exports.useImages = ({ include, exclude, options } = {}) => ({
     module: {
@@ -21,7 +22,8 @@ exports.useImages = ({ include, exclude, options } = {}) => ({
 
 /**
  * Handle fonts.
- * @param {*} param0 
+ * @param {Object} options - Fonts options including
+ * include and exclude on the rule and options on 'use'. 
  */
 exports.useFonts = ({ include, exclude, options } = {}) => ({
     module: {
