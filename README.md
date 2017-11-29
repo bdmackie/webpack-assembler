@@ -101,4 +101,4 @@ module.exports = config
 
 ## See also
 
-* [API documentation](https://github.com/bdmackie/webpack-assembler/blog/master/docs/API.md)
+* [API documentation](https://github.com/bdmackie/webpack-assembler/blob/master/docs/API.md)

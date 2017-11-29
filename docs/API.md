@@ -4,9 +4,11 @@
 <dt><a href="#split">split(bundles)</a></dt>
 <dd><p>Splits bundles.</p>
 </dd>
-<dt><a href="#isVendor">isVendor(param0)</a></dt>
-<dd><p>Determines if a bundle is a vendor bundle
-i.e. is installed in node_modules</p>
+<dt><a href="#isVendor">isVendor(options)</a></dt>
+<dd><p>Checks if a bundle is a vendor bundle
+i.e. is installed in node_modules
+Used as an include filter for split to 
+create a &#39;vendor bundle&#39;.</p>
 </dd>
 <dt><a href="#analyze">analyze()</a></dt>
 <dd><p>Analyzes bundles for diagnostics.</p>
@@ -25,17 +27,17 @@ e.g.
 <dt><a href="#circularDependency">circularDependency(options, noDefaults)</a></dt>
 <dd><p>Detect circular dependencies.</p>
 </dd>
-<dt><a href="#library">library(param0)</a></dt>
+<dt><a href="#library">library(options)</a></dt>
 <dd><p>Output settings for a library.
 Defaults to UMD format.</p>
 </dd>
-<dt><a href="#page">page(param0)</a></dt>
+<dt><a href="#page">page(options)</a></dt>
 <dd><p>Output settings for a page.</p>
 </dd>
-<dt><a href="#useImages">useImages(param0)</a></dt>
+<dt><a href="#useImages">useImages(options)</a></dt>
 <dd><p>Handle images.</p>
 </dd>
-<dt><a href="#useFonts">useFonts(param0)</a></dt>
+<dt><a href="#useFonts">useFonts(options)</a></dt>
 <dd><p>Handle fonts.</p>
 </dd>
 </dl>
@@ -47,21 +49,23 @@ Splits bundles.
 
 **Kind**: global function  
 
-| Param | Type |
-| --- | --- |
-| bundles | <code>\*</code> | 
+| Param | Type | Description |
+| --- | --- | --- |
+| bundles | <code>Array.&lt;Object&gt;</code> | An array of bundle configuration passed through to CommonsChunkPlugin |
 
 <a name="isVendor"></a>
 
-# isVendor(param0)
-Determines if a bundle is a vendor bundle
+# isVendor(options)
+Checks if a bundle is a vendor bundle
 i.e. is installed in node_modules
+Used as an include filter for split to 
+create a 'vendor bundle'.
 
 **Kind**: global function  
 
 | Param | Type |
 | --- | --- |
-| param0 | <code>\*</code> | 
+| options | <code>Object</code> | 
 
 <a name="analyze"></a>
 
@@ -119,46 +123,46 @@ Detect circular dependencies.
 
 <a name="library"></a>
 
-# library(param0)
+# library(options)
 Output settings for a library.
 Defaults to UMD format.
 
 **Kind**: global function  
 
-| Param | Type |
-| --- | --- |
-| param0 | <code>\*</code> | 
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | library options including path, filename, library, libraryTarget and externals |
 
 <a name="page"></a>
 
-# page(param0)
+# page(options)
 Output settings for a page.
 
 **Kind**: global function  
 
-| Param | Type |
-| --- | --- |
-| param0 | <code>\*</code> | 
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | library options including path, template, title, entry and chunks. |
 
 <a name="useImages"></a>
 
-# useImages(param0)
+# useImages(options)
 Handle images.
 
 **Kind**: global function  
 
-| Param | Type |
-| --- | --- |
-| param0 | <code>\*</code> | 
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | Images options including inlude, exclude on the rule and options on 'use'. |
 
 <a name="useFonts"></a>
 
-# useFonts(param0)
+# useFonts(options)
 Handle fonts.
 
 **Kind**: global function  
 
-| Param | Type |
-| --- | --- |
-| param0 | <code>\*</code> | 
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | Fonts options including include and exclude on the rule and options on 'use'. |
 
