@@ -1,9 +1,23 @@
 # webpack-assembler
 Assemble webpack configs by merging common and custom parts.
 
-Includes two exports:
-merge - the default export of webpack-merge for merging configurations
-parts - a set of common parts.
+It passes through most options to the underlying webpack plugins without trying to change
+the paradigm too much. The result is reduced webpack config size without too much loss of
+control.
+
+It includes two exports:
+* merge - the default export of webpack-merge for merging configurations
+* parts - a set of common parts.
+
+Also easily brings in these dependencies:
+- circular-dependency-plugin
+- clean-webpack-plugin
+- copy-webpack-plugin
+- file-loader
+- html-webpack-plugin
+- url-loader
+- webpack-bundle-analyzer
+- webpack-merge
 
 # Examples
 
