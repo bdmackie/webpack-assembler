@@ -1,6 +1,6 @@
 {
   "name": "webpack-assembler",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "Assemble webpack configs by merging common and custom parts.",
   "main": "src/index.js",
   "scripts": {
