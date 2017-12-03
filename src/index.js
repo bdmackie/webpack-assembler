@@ -1,6 +1,10 @@
 exports.merge = require('webpack-merge')
 
 var parts = {
+    /**
+     * Assign custom part methods to the
+     * assembler parts object.
+     */
     assign: function(parts) {
         Object.assign(this, parts)
         return this
