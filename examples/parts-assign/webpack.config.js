@@ -17,7 +17,7 @@ var config = merge([
     }),
 
     // Output
-    parts.output({
+    parts.customOutput({
         path: BUILD_DIR,
         filename: 'bundle.[hash:8].js'
     })

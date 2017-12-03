@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "example:basic": "./node_modules/.bin/webpack --config examples/basic/webpack.config.js",
+    "example:output": "./node_modules/.bin/webpack --config examples/output/webpack.config.js",
     "example:template-default": "./node_modules/.bin/webpack --config examples/template-default/webpack.config.js",
     "example:template-custom": "./node_modules/.bin/webpack --config examples/template-custom/webpack.config.js",
     "example:split": "./node_modules/.bin/webpack --config examples/split/webpack.config.js",

@@ -38,16 +38,19 @@ const genBase = (env) => [
 ]
 
 const genDev = () => [
-    parts.clean([BUILD_DIR + './dev'], {root:ROOT_DIR}),
-
-    {
+    // Output
+    parts.output({
+        // entry: SRC_DIR + '/index.js',
         output: {
             path: BUILD_DIR + '/dev',
-            filename: '[name].bundle.js'
+            filename: '[name].bundle.[hash:8].js'
         },
+        clean: true
+    }),
 
+    // Dev server
+    {
         devtool: 'eval-source-map',
-
         devServer: {
             inline: true,
             contentBase: 'src',
@@ -57,16 +60,17 @@ const genDev = () => [
 ]
 
 const genProd = () => [
-    parts.clean([BUILD_DIR + './prod'], {root:ROOT_DIR}),
-
-    {
+    // Output
+    parts.output({
         output: {
             path: BUILD_DIR + '/prod',
-            filename: '[name].bundle.[chunkhash].js'
+            filename: '[name].bundle.[hash:8].js'
         },
+        clean: true
+    }),
 
+    {
         devtool: false,
-        //devtool: "source-map",
     }
 ]
 

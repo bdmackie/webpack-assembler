@@ -1,7 +1,9 @@
 const webpack = require('webpack')
+const merge = require('webpack-merge')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const CircularDependencyPlugin = require('circular-dependency-plugin')
+const path = require('path')
 
 /**
  * Setup the node process environment.
@@ -48,6 +50,27 @@ exports.copy = (patterns) => ({
         new CopyWebpackPlugin(patterns)
     ]
 })
+
+/**
+ * A helper part combining common output options and
+ * an option to clean the output path.
+ * @param {*} param0 
+ */
+exports.output = ({entry, output, clean, root}) => {
+    var parts = []
+    if (clean) {
+        if (!root)
+            root = path.dirname(output.path)
+        parts.push(exports.clean([output.path], {root}))
+    }
+    parts.push(
+        {
+            entry,
+            output
+        }
+    )
+    return merge(parts)
+}
 
 /**
  * Detect circular dependencies.

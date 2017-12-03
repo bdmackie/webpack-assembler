@@ -2,7 +2,7 @@ const assembler = require('../../src/index')
 
 var parts = {}
 
-parts.output = ({path, filename}) => (
+parts.customOutput = ({path, filename}) => (
     {
         // entry: SRC_DIR + '/index.js',
         output: {

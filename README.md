@@ -28,7 +28,7 @@ const {merge, parts} = require('webpack-assembler')
 
 const ROOT_DIR = __dirname
 const SRC_DIR = exports.SRC_DIR = path.resolve(ROOT_DIR, './src')
-const BUILD_DIR = exports.DIST_DIR = path.resolve(ROOT_DIR, './build/01')
+const BUILD_DIR = exports.DIST_DIR = path.resolve(ROOT_DIR, './build')
 
 var config = merge([
     parts.env({
@@ -36,17 +36,15 @@ var config = merge([
         DEBUG: true
     }),
 
-    // Clean
-    parts.clean([BUILD_DIR], {root:ROOT_DIR}),
-
-    // Simple entry and output.
-    {
+    // Output
+    parts.output({
         entry: SRC_DIR + '/index.js',
         output: {
             path: BUILD_DIR,
             filename: 'bundle.js'
-        }
-    },
+        },
+        clean: true
+    }),
 
     // Copy hosting page.
     parts.copy([
@@ -66,16 +64,10 @@ const {merge, parts} = require('webpack-assembler')
 
 const ROOT_DIR = __dirname
 const SRC_DIR = exports.SRC_DIR = path.resolve(ROOT_DIR, './src')
-const DIST_DIR = exports.DIST_DIR = path.resolve(ROOT_DIR, './build/03')
+const BUILD_DIR = exports.DIST_DIR = path.resolve(ROOT_DIR, './build')
 
 var config = merge([
     parts.circularDependencies(),
-
-    // Clean
-    parts.clean([DIST_DIR], {root:ROOT_DIR}),
-    
-    parts.useFiles(),
-    parts.useFonts(),
 
     // Page hosted entry
     parts.page({
@@ -85,13 +77,17 @@ var config = merge([
     }),
 
     // Output
-    {
-        // entry: SRC_DIR + '/index.js',
+    parts.output({
         output: {
-            path: DIST_DIR,
+            path: BUILD_DIR,
             filename: '[name].bundle.[hash:8].js'
-        }
-    },
+        },
+        clean: true
+    }),
+
+    // Use
+    parts.useFiles(),
+    parts.useFonts(),
 
     // Split bundles.
     parts.split([
@@ -155,16 +151,19 @@ const genBase = (env) => [
 ]
 
 const genDev = () => [
-    parts.clean([BUILD_DIR + './dev'], {root:ROOT_DIR}),
-
-    {
+    // Output
+    parts.output({
+        // entry: SRC_DIR + '/index.js',
         output: {
             path: BUILD_DIR + '/dev',
-            filename: '[name].bundle.js'
+            filename: '[name].bundle.[hash:8].js'
         },
+        clean: true
+    }),
 
+    // Dev server
+    {
         devtool: 'eval-source-map',
-
         devServer: {
             inline: true,
             contentBase: 'src',
@@ -174,16 +173,17 @@ const genDev = () => [
 ]
 
 const genProd = () => [
-    parts.clean([BUILD_DIR + './prod'], {root:ROOT_DIR}),
-
-    {
+    // Output
+    parts.output({
         output: {
             path: BUILD_DIR + '/prod',
-            filename: '[name].bundle.[chunkhash].js'
+            filename: '[name].bundle.[hash:8].js'
         },
+        clean: true
+    }),
 
+    {
         devtool: false,
-        //devtool: "source-map",
     }
 ]
 

@@ -6,9 +6,6 @@ const SRC_DIR = exports.SRC_DIR = path.resolve(ROOT_DIR, './src')
 const BUILD_DIR = exports.DIST_DIR = path.resolve(ROOT_DIR, './build')
 
 var config = merge([
-    // Clean
-    parts.clean([BUILD_DIR], {root:ROOT_DIR}),
-
     // Page hosted entry
     parts.page({
         entry: {
@@ -18,13 +15,14 @@ var config = merge([
     }),
 
     // Output
-    {
+    parts.output({
         // entry: SRC_DIR + '/index.js',
         output: {
             path: BUILD_DIR,
             filename: 'bundle.[hash:8].js'
-        }
-    }
+        },
+        clean: true
+    })
 ])
 
 module.exports = config
