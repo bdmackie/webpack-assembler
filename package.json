@@ -9,6 +9,7 @@
     "example:template-custom": "./node_modules/.bin/webpack --config examples/template-custom/webpack.config.js",
     "example:split": "./node_modules/.bin/webpack --config examples/split/webpack.config.js",
     "example:analyze": "./node_modules/.bin/webpack --config examples/analyze/webpack.config.analyze.js",
+    "example:parts-assign": "./node_modules/.bin/webpack --config examples/parts-assign/webpack.config.js",
     "clean": "rm -rf ./examples/build && rm -rf ./examples/stats",
     "clean:all": "yarn clean && rm -rf ./node_modules && rm -rf ./.awcache",
     "test": "echo \"Error: no test specified\" && exit 1",
