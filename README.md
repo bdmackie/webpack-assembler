@@ -19,6 +19,9 @@ Also easily brings in these dependencies:
 - webpack-bundle-analyzer
 - webpack-merge
 
+Related modules:
+- [webpack-assembler-react](https://www.npmjs.com/package/webpack-assembler-react)
+
 # Examples
 
 ## Basic
