@@ -1,9 +1,9 @@
 var path = require('path')
-const {merge, parts} = require('../src/index')
+const {merge, parts} = require('../../src/index')
 
 const ROOT_DIR = __dirname
 const SRC_DIR = exports.SRC_DIR = path.resolve(ROOT_DIR, './src')
-const DIST_DIR = exports.DIST_DIR = path.resolve(ROOT_DIR, './build/01')
+const BUILD_DIR = exports.DIST_DIR = path.resolve(ROOT_DIR, './build')
 
 var config = merge([
     parts.env({
@@ -12,13 +12,13 @@ var config = merge([
     }),
 
     // Clean
-    parts.clean([DIST_DIR], {root:ROOT_DIR}),
+    parts.clean([BUILD_DIR], {root:ROOT_DIR}),
 
     // Simple entry and output.
     {
         entry: SRC_DIR + '/index.js',
         output: {
-            path: DIST_DIR,
+            path: BUILD_DIR,
             filename: 'bundle.js'
         }
     },
@@ -26,7 +26,7 @@ var config = merge([
     // Copy hosting page.
     parts.copy([
         {
-            from: './examples/src/index-copy.html'
+            from: SRC_DIR + '/index.html'
         }
     ]),
 ])

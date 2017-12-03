@@ -1,13 +1,13 @@
 var path = require('path')
-const {merge, parts} = require('../src/index')
+const {merge, parts} = require('../../src/index')
 
 const ROOT_DIR = __dirname
 const SRC_DIR = exports.SRC_DIR = path.resolve(ROOT_DIR, './src')
-const DIST_DIR = exports.DIST_DIR = path.resolve(ROOT_DIR, './build/03')
+const BUILD_DIR = exports.DIST_DIR = path.resolve(ROOT_DIR, './build')
 
 var config = merge([
     // Clean
-    parts.clean([DIST_DIR], {root:ROOT_DIR}),
+    parts.clean([BUILD_DIR], {root:ROOT_DIR}),
 
     // Page hosted entry
     parts.page({
@@ -20,7 +20,7 @@ var config = merge([
     {
         // entry: SRC_DIR + '/index.js',
         output: {
-            path: DIST_DIR,
+            path: BUILD_DIR,
             filename: '[name].bundle.[hash:8].js'
         }
     },

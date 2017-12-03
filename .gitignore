@@ -1,5 +1,5 @@
-examples/dist
-examples/build
+examples/**/dist
+examples/**/build
 
 --- github Node below ---
 
