@@ -193,3 +193,4 @@ module.exports = assemble(genBase, genDev, genProd)
 ## See also
 
 * [API documentation](https://github.com/bdmackie/webpack-assembler/blob/master/docs/API.md)
+* [Examples](https://github.com/bdmackie/webpack-assembler/blob/master/examples)
