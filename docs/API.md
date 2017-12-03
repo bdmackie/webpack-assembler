@@ -24,6 +24,10 @@ e.g.
 <dt><a href="#copy">copy(patterns)</a></dt>
 <dd><p>Copy straight from source to destination.</p>
 </dd>
+<dt><a href="#output">output(param0)</a></dt>
+<dd><p>A helper part combining common output options and
+an option to clean the output path.</p>
+</dd>
 <dt><a href="#circularDependency">circularDependency(options, noDefaults)</a></dt>
 <dd><p>Detect circular dependencies.</p>
 </dd>
@@ -113,6 +117,18 @@ Copy straight from source to destination.
 | Param | Type | Description |
 | --- | --- | --- |
 | patterns | <code>\*</code> | Patterns to copy, passed through to copy-webpack-plugin |
+
+<a name="output"></a>
+
+# output(param0)
+A helper part combining common output options and
+an option to clean the output path.
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| param0 | <code>\*</code> | 
 
 <a name="circularDependency"></a>
 

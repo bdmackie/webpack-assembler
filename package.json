@@ -17,7 +17,7 @@
     "clean": "rm -rf ./examples/**/build && rm -rf ./examples/**/stats",
     "clean:all": "yarn clean && rm -rf ./node_modules && rm -rf ./.awcache",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "jsdoc2md src/*.js --heading-depth 1 > docs/API.md; echo ",
+    "docs": "./node_modules/jsdoc-to-markdown/bin/cli.js src/*.js --heading-depth 1 > docs/API.md; echo ",
     "bump": "npm version patch",
     "preversion": "yarn clean ",
     "version": "git add -A",
@@ -53,6 +53,7 @@
   },
   "devDependencies": {
     "eslint": "^4.12.0",
+    "jsdoc-to-markdown": "^3.0.2",
     "webpack": "^3.8.1"
   },
   "peerDependencies": {
