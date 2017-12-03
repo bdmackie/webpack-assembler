@@ -27,6 +27,11 @@ e.g.
 <dt><a href="#circularDependency">circularDependency(options, noDefaults)</a></dt>
 <dd><p>Detect circular dependencies.</p>
 </dd>
+<dt><a href="#assemble">assemble(genBase, genDev, genProd)</a></dt>
+<dd><p>Assembles a configuration function that recieves a single
+&quot;env&quot; object contianing the environment commmand line
+argument passed thorugh to wepack</p>
+</dd>
 <dt><a href="#library">library(options)</a></dt>
 <dd><p>Output settings for a library.
 Defaults to UMD format.</p>
@@ -120,6 +125,21 @@ Detect circular dependencies.
 | --- | --- | --- |
 | options | <code>\*</code> | options to pass through to circular-dependency-plugin |
 | noDefaults | <code>\*</code> | Indicates to not use this library's defaults |
+
+<a name="assemble"></a>
+
+# assemble(genBase, genDev, genProd)
+Assembles a configuration function that recieves a single
+"env" object contianing the environment commmand line
+argument passed thorugh to wepack
+
+**Kind**: global function  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| genBase | <code>\*</code> | A function to return a base config / parts array. |
+| genDev | <code>\*</code> | A function to return a dev config / parts array. |
+| genProd | <code>\*</code> | A function to return a prod config / parts array. |
 
 <a name="library"></a>
 
